@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "assets/images"
+public_folder: "/assets/images"
+collections:
+  - name: "news"
+    label: "Wararka"
+    folder: "posts"
+    create: true
+    fields:
+      - {label: "Cinwaanka", name: "title", widget: "string"}
+      - {label: "Sawirka", name: "image", widget: "image"}
+      - {label: "Qoraalka", name: "body", widget: "markdown"}
