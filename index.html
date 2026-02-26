@@ -1,115 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bulhaar News | International & Political Analysis</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulhaar News - BBC Style</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        BULHAAR <span>NEWS</span>
-        <p class="tagline">International • Political Analysis • Berbera, Somaliland</p>
-    </div>
+    <header class="main-header">
+        <div class="logo">
+            <h1>BULHAAR<span>NEWS</span></h1>
+        </div>
+    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">World</a>
-        <a href="#">Politics</a>
-        <a href="#">Africa</a>
-        <a href="#">Economy</a>
-        <a href="#">Analysis</a>
-        <a href="#contact">Contact</a>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Africa</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Economy</a></li>
+            <li><a href="/admin/">Admin</a></li>
+        </ul>
     </nav>
-</header>
 
-<!-- BREAKING NEWS TICKER -->
-<div class="ticker">
-    <marquee>
-        🔴 Breaking: Global Political Developments | 
-        Red Sea Security Updates | 
-        Berbera Port Economic Growth | 
-        International Diplomatic Talks Ongoing
-    </marquee>
-</div>
-
-<!-- MAIN CONTENT -->
-<section class="container">
-
-    <!-- FEATURED NEWS -->
-    <div class="featured">
-        <img src="https://picsum.photos/1000/500" alt="">
-        <div class="featured-text">
-            <h1>Global Political Shifts Reshaping the Horn of Africa</h1>
-            <p>Expert academic analysis based in Berbera, Somaliland examining global power transitions and regional stability.</p>
-        </div>
+    <div class="ticker-wrapper">
+        <div class="ticker-label">BREAKING</div>
+        <marquee class="ticker-text">Global Political Shifts Reshaping the Horn of Africa | Berbera Port Economic Growth | International Sea Security Updates</marquee>
     </div>
 
-    <!-- NEWS GRID -->
-    <div class="news-grid">
-
-        <div class="card">
-            <img src="https://picsum.photos/400/250?1">
-            <h3>UN Security Council Debate on Red Sea Security</h3>
-            <p>International leaders discuss maritime stability and geopolitical balance.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/400/250?2">
-            <h3>Somaliland Economic Expansion through Berbera Port</h3>
-            <p>Strategic port investments reshape regional trade corridors.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/400/250?3">
-            <h3>US-China Rivalry and African Diplomacy</h3>
-            <p>Academic insight into superpower competition across Africa.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer id="contact">
-    <div class="footer-content">
-
-        <div class="footer-about">
-            <h2>Bulhaar News</h2>
-            <p>Independent international news platform delivering expert-level political analysis from Berbera, Somaliland.</p>
-        </div>
-
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <a href="#">World</a><br>
-            <a href="#">Politics</a><br>
-            <a href="#">Africa</a><br>
-            <a href="#">Analysis</a>
-        </div>
-
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p>Email: bulhaarn@gmail.com</p>
-            <p>Berbera, Somaliland</p>
-            <div class="socials">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
+    <main class="container">
+        <article class="news-card featured">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000" alt="Featured News">
+            <div class="card-content">
+                <h2>Global Political Shifts Reshaping the Horn of Africa</h2>
+                <p>Expert academic analysis based in Berbera, Somaliland examining global power transitions and regional stability.</p>
+                <span class="tag">Analysis</span>
             </div>
-        </div>
+        </article>
 
-    </div>
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1504150559433-c516936b899d?auto=format&fit=crop&q=80&w=1000" alt="News">
+            <div class="card-content">
+                <h2>UN Security Council Debate on Red Sea Security</h2>
+                <p>International leaders discuss maritime stability and geopolitical balance.</p>
+                <span class="tag">World</span>
+            </div>
+        </article>
 
-    <div class="bottom-bar">
-        © 2026 Bulhaar News | All Rights Reserved
-    </div>
-</footer>
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1000" alt="News">
+            <div class="card-content">
+                <h2>Economic Growth in Berbera Port</h2>
+                <p>New investments are driving economic transformation in the region.</p>
+                <span class="tag">Economy</span>
+            </div>
+        </article>
+    </main>
 
+    <footer class="main-footer">
+        <p>&copy; 2026 Bulhaar News. All rights reserved.</p>
+    </footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 </body>
 </html>
